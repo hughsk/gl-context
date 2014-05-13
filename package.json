@@ -1,0 +1,35 @@
+{
+  "name": "gl-context",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify test.js | indexhtmlify | hcat"
+  },
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^4.1.2",
+    "hcat": "0.0.4",
+    "indexhtmlify": "^1.2.0",
+    "tape": "^2.12.3"
+  },
+  "dependencies": {
+    "raf-component": "^1.1.2"
+  },
+  "description": "A shorthand module for creating a new WebGL context and basic animation loop.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/gl-context.git"
+  },
+  "keywords": [
+    "gl",
+    "webgl",
+    "context",
+    "simple",
+    "browserify"
+  ],
+  "bugs": {
+    "url": "https://github.com/hughsk/gl-context/issues"
+  },
+  "homepage": "https://github.com/hughsk/gl-context"
+}
