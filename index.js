@@ -2,10 +2,17 @@ var raf = require('raf-component')
 
 module.exports = createContext
 
-function createContext(canvas, render) {
+function createContext(canvas, opts, render) {
+  if (typeof opts === 'function') {
+    render = opts
+    opts = {}
+  } else {
+    opts = opts || {}
+  }
+
   var gl = (
-    canvas.getContext('webgl') ||
-    canvas.getContext('webgl-experimental')
+    canvas.getContext('webgl', opts) ||
+    canvas.getContext('webgl-experimental', opts)
   )
 
   if (!gl) {

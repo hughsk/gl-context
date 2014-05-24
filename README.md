@@ -9,11 +9,23 @@ is for those cases when you want more flexibility.
 
 [![gl-context](https://nodei.co/npm/gl-context.png)](https://nodei.co/npm-dl/gl-context)
 
-### gl = createContext(canvas, [render])
+### gl = createContext(canvas, [opts], [render])
 
 Creates and returns a new WebGL context attached to `canvas`. Optionally, you
 can pass in a `render` function and this will be called once each frame using
 `requestAnimationFrame`.
+
+Optionally, you can pass `opts` to the `getContext` method, e.g.
+
+``` javascript
+var canvas = document.createElement('canvas')
+
+var gl = createContext(canvas, {
+  premultipliedAlpha: false
+}, function render() {
+  // render loop...
+})
+```
 
 ## License
 
